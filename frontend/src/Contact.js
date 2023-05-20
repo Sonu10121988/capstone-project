@@ -14,7 +14,7 @@ const Contact = () => {
       });
 
       const datas = await res.json();
-      console.log(datas);
+      //console.log(datas);
       setUserData(datas);
 
       if (!res.status === 200) {

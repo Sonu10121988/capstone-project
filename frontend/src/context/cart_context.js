@@ -5,18 +5,18 @@ import reducer from "../reducer/cartReducer";
 
 const CartContext = createContext();
 
-// const getLocalCardData = ()=>{
-//    let localBookData = localStorage.getItem("bookCart");
-//    if(localBookData === []){
-//     return [];
-//    } else {
-//     return JSON.parse(localBookData);
-//    }
-// };
+const getLocalCardData = ()=>{
+   let localBookData = localStorage.getItem("bookCart");
+   if(localBookData === []){
+    return [];
+   } else {
+    return JSON.parse(localBookData);
+   }
+};
 
 const initialState = {
-   cart: [],
-   //cart:getLocalCardData(),
+   //cart: [],
+   cart:getLocalCardData(),
    total_item: "",
    total_price: "",
    shipping_fee: 50000,

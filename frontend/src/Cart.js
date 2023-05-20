@@ -15,7 +15,7 @@ const Cart = () => {
   //console.log(cart);
   let[email, setEmail] = useState();
   let userEmail = email;
-  console.log(userEmail, "cart user email");
+  //console.log(userEmail, "cart user email");
   useEffect(() => {
     getUserEmail();
   }, []);
@@ -43,7 +43,7 @@ const Cart = () => {
       });
       const data = await res.json();
       setEmail(data.email);
-      console.log(data, "hello data");
+      //console.log(data, "hello data");
       if (!res.status === 200) {
         const error = new Error(res.error);
         throw error;

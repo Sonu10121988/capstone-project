@@ -16,8 +16,8 @@ const OrderHistory = () => {
         credentials: "include",
       });
       const data = await res.json();
-      console.log(data, "hello data");
-      console.log(data.orderHistory.items, "items here");
+      //console.log(data, "hello data");
+      //console.log(data.orderHistory.items, "show items");
       setprevHistory(data.orderHistory.items);
       if (!res.status === 200) {
         const error = new Error(res.error);
@@ -44,7 +44,7 @@ const OrderHistory = () => {
       });
 
       const datas = await res.json();
-      console.log(datas);
+      //console.log(datas);
       setUserData(datas);
 
       if (!res.status === 200) {
@@ -81,12 +81,12 @@ const OrderHistory = () => {
             </tr>
           </thead>
           <tbody>
-            {prevHistory.map((orderhistoryinfo, index) => (
+            {prevHistory.map((orderDetail, index) => (
               <tr>
                 <th scope="row">{index}</th>
-                <td>{orderhistoryinfo._id}</td>
-                <td>{orderhistoryinfo.price / 100} /- </td>
-                <td>{orderhistoryinfo.name}</td>
+                <td>{orderDetail._id}</td>
+                <td>{orderDetail.price / 100} /- </td>
+                <td>{orderDetail.name}</td>
                 <td>Process...</td>
               </tr>
             ))}
