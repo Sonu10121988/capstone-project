@@ -290,10 +290,10 @@ const Navbar = styled.nav`
     }
     .navbar_lists {
       width: 100vw;
-      height: 100vh;
+      height: 60vh;
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 45px;
+      left: -360px;
       background-color: #fff;
       display: flex;
       justify-content: center;
